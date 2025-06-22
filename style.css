@@ -1,0 +1,289 @@
+/* FONTES E VARIÁVEIS GLOBAIS */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700&display=swap');
+
+/* Tema Claro (Padrão) */
+:root {
+  --primary-color: #d32f2f; /* Cor primária vermelha como na imagem */
+  --background-color: #f0f2f5;
+  --card-background: #ffffff;
+  --text-color: #1f2937;
+  --text-light: #6b7280;
+  --border-color: #e5e7eb;
+  --shadow-color: rgba(0, 0, 0, 0.05);
+  --danger-color: #ef4444;
+  --danger-hover: #dc2626;
+  --toggle-icon: #4a5568; /* Cor do ícone do tema */
+  --app-header-bg: #fff;
+}
+
+/* Tema Escuro */
+body.dark-theme {
+  --background-color: #111827;
+  --card-background: #1f2937;
+  --text-color: #f9fafb;
+  --text-light: #9ca3af;
+  --border-color: #374151;
+  --shadow-color: rgba(0, 0, 0, 0.2);
+  --danger-color: #f87171;
+  --danger-hover: #ef4444;
+  --toggle-icon: #cbd5e0; /* Cor do ícone do tema */
+  --app-header-bg: #1a202c;
+}
+
+/* ESTILOS BASE */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Noto Sans', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* CABEÇALHO PRINCIPAL */
+.app-header {
+  background-color: var(--app-header-bg);
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.app-title {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-color);
+}
+
+.app-logo {
+  width: 150px;
+  height: 50px;
+}
+
+/* SELETOR DE TEMA */
+.theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: var(--toggle-icon);
+  padding: 0.5rem;
+  border-radius: 50%;
+  transition: color 0.3s;
+}
+
+.theme-toggle:hover {
+  color: var(--primary-color); /* Ou outra cor de destaque */
+}
+
+/* CABEÇALHO DA LISTA E FILTROS */
+.list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2.5rem;
+  padding: 0 0.5rem; /* Adicionado um pequeno padding lateral para alinhar visualmente */
+}
+
+.list-header h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--text-color);
+  margin-bottom: 0; /* Remove a margem inferior padrão do h2 */
+}
+
+.filters {
+  display: flex;
+  gap: 0.5rem; /* Reduzi um pouco o gap entre os botões */
+}
+
+.filter-btn {
+  background-color: transparent;
+  color: var(--text-light); /* cinza claro */
+  border: 1.5px solid var(--border-color); /* borda cinza */
+  padding: 0.5rem 1rem;
+  border-radius: 999px; /* pílula */
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, transform 0.2s, border-color 0.3s;
+}
+
+.filter-btn:hover {
+  background-color: var(--primary-color);
+  color: white;
+  border-color: var(--primary-color);
+  transform: scale(1.03);
+}
+
+.filter-btn.active {
+  background-color: var(--primary-color);
+  color: white;
+  border-color: var(--primary-color);
+}
+
+/* GRID DE EXTENSÕES */
+.extensions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+/* CARD DA EXTENSÃO */
+.extension-card {
+  background-color: var(--card-background);
+  border: 1px solid var(--border-color);
+  border-radius: 8px; /* Ajustei o border-radius para um visual mais parecido */
+  padding: 1rem; /* Reduzi um pouco o padding dos cards */
+  box-shadow: 0 2px 8px var(--shadow-color); /* Ajustei a sombra */
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+}
+
+.extension-card.inactive {
+  opacity: 0.6;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem; /* Reduzi um pouco o gap */
+  margin-bottom: 0.75rem; /* Reduzi um pouco a margem */
+}
+
+.card-logo {
+  width: 36px; /* Ajustei o tamanho do logo */
+  height: 36px; /* Ajustei o tamanho do logo */
+}
+
+.card-title {
+  font-size: 1rem; /* Ajustei o tamanho da fonte */
+  font-weight: 700;
+  color: var(--text-color);
+}
+
+.card-description {
+  color: var(--text-light);
+  font-size: 0.8rem; /* Ajustei o tamanho da fonte */
+  flex-grow: 1;
+  margin-bottom: 1rem; /* Reduzi um pouco a margem */
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid var(--border-color);
+  padding-top: 0.75rem; /* Reduzi um pouco o padding */
+}
+
+.remove-btn {
+  background-color: transparent;
+  color: var(--text-light); /* cor de texto neutra */
+  border: 1.5px solid var(--border-color); /* borda cinza clara */
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, transform 0.2s, border-color 0.3s;
+}
+
+.remove-btn:hover {
+  background-color: var(--danger-color);
+  color: white;
+  border-color: var(--danger-color);
+  transform: scale(1.03);
+}
+
+
+/* INTERRUPTOR (TOGGLE SWITCH) */
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 40px; /* Ajustei a largura */
+  height: 22px; /* Ajustei a altura */
+}
+
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--border-color);
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px; /* Ajustei a altura */
+  width: 16px; /* Ajustei a largura */
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: var(--primary-color);
+}
+
+input:checked + .slider:before {
+  transform: translateX(18px); /* Ajustei a posição */
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 640px) {
+  .container {
+    padding: 1rem;
+  }
+  .app-header {
+    padding: 1rem;
+  }
+  .app-title {
+    font-size: 1.25rem;
+  }
+  .list-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .filters {
+    gap: 0.3rem;
+  }
+  .filter-btn {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.75rem;
+  }
+  .extensions-grid {
+    grid-template-columns: 1fr;
+  }
+}
