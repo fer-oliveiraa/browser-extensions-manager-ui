@@ -1,64 +1,31 @@
-# Lista 05 - Interface de gerenciamento de extensões do navegador
+# 🚀 Gerenciador de Extensões do Navegador
 
-![Prévia do design para o desafio de codificação da Interface de gerenciamento de extensões do navegador](./preview.jpg)
+Este é um projeto desenvolvido como parte da **Lista 05** da disciplina de Programação para Internet I, com o objetivo de praticar HTML, CSS e JavaScript na construção de uma interface de gerenciamento de extensões de navegador.
 
-## Instruções! 👋
 
-**Para fazer este desafio, você precisa de um conhecimento básico de HTML, CSS e JavaScript.**
+## 📚 Funcionalidades
 
-## O desafio
+✅ Alternar entre extensões **ativas e inativas**  
+✅ **Filtrar** extensões (Todas / Ativas / Inativas)  
+✅ **Remover** extensões da lista  
+✅ **Modo claro e escuro** com salvamento de preferência  
+✅ **Responsividade** (mobile e desktop)  
+✅ Efeitos de **hover e foco** para elementos interativos  
+✅ Dados carregados dinamicamente via `data.json`  
 
-Seu desafio é construir esta interface de gerenciamento de extensões do navegador e deixá-la o mais próxima possível do design.
+---
 
-Você pode usar qualquer ferramenta que quiser para ajudá-lo a completar o desafio. Então, se você tem algo que gostaria de praticar, sinta-se à vontade para tentar.
+## 🧪 Tecnologias Utilizadas
 
-Acesse o repositório [Lista 05](https://github.com/andreluizfrancabatista/browser-extensions-manager-ui) para ter acesso aos artefatos referente a essa atividade. 
+- HTML5
+- CSS3 (com variáveis CSS e media queries)
+- JavaScript (DOM, fetch, eventos)
+- Git + GitHub Pages
 
-Os dados para as extensões estão disponíveis em um arquivo local `data.json`. Assim, você pode usar isso para adicionar os dados dinamicamente, se assim desejar.
+---
 
-Seus usuários devem ser capazes de:
+## 🔗 Acesse o Projeto Online
 
-- Alternar entre estados ativo e inativo das extensões
-- Filtrar extensões ativas e inativas
-- Remover extensões da lista
-- Visualizar o layout ideal para a interface dependendo do tamanho da tela do dispositivo (responsividade)
-- Visualizar estados de hover e foco para todos os elementos interativos na página
+👉 [Clique aqui para ver o site publicado](https://fer-oliveiraa.github.io/browser-extensions-manager-ui/)
 
-## Onde encontrar tudo
-
-Sua tarefa é construir o projeto seguindo os designs dentro da pasta `/design`. Você encontrará tanto uma versão mobile quanto desktop do design.
-
-Os designs estão em formato JPG estático. Usar JPGs significa que você precisará usar seu melhor julgamento para estilos como `font-size`, `padding` e `margin`.
-
-Todos os recursos necessários para este projeto estão na pasta `/assets`. As imagens já estão exportadas para o tamanho correto da tela e otimizadas.
-
-## Construindo seu projeto
-
-Sinta-se à vontade para usar qualquer fluxo de trabalho com o qual se sinta confortável. Abaixo está um processo sugerido, mas não é obrigatório seguir estes passos:
-
-1. Inicialize seu projeto como um repositório público no [GitHub](https://github.com/). Criar um repositório facilitará o compartilhamento do seu código com a comunidade se você precisar de ajuda.
-2. Analise os designs para começar a planejar como você abordará o projeto. Este passo é crucial para ajudá-lo a pensar com antecedência sobre classes CSS para criar estilos reutilizáveis.
-3. Antes de adicionar qualquer estilo, estruture seu conteúdo com HTML. Escrever seu HTML primeiro pode ajudar a focar sua atenção em criar conteúdo bem estruturado.
-4. Escreva os estilos base para seu projeto, incluindo estilos gerais de conteúdo, como `font-family` e `font-size`.
-5. Comece adicionando estilos ao topo da página e trabalhe para baixo. Só passe para a próxima seção quando estiver satisfeito de ter completado a área em que está trabalhando.
-
-## Fazendo deploy do seu projeto
-
-Como mencionado acima, há muitas maneiras de hospedar seu projeto gratuitamente. Hosts recomendados são:
-
-- [GitHub Pages](https://pages.github.com/)
-- [Vercel](https://vercel.com/)
-- [Netlify](https://www.netlify.com/)
-
-## Crie um `README.md` personalizado
-
-Recomendo fortemente substituir este `README.md` por um personalizado com informações sobre sua aplicação. 
-
-## Enviando sua solução 📝
-
-- Data de entrega: 17/06/2025.
-- Individual.
-- Envie o link da sua solução no campo próprio no AVA.
-- O repositório deve conter todos os arquivos (HTML, CSS, JS).
-
-**Divirta-se construindo!** 🚀
+---

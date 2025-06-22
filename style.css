@@ -1,9 +1,8 @@
-/* FONTES E VARIÁVEIS GLOBAIS */
+
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700&display=swap');
 
-/* Tema Claro (Padrão) */
 :root {
-  --primary-color: #d32f2f; /* Cor primária vermelha como na imagem */
+  --primary-color: #d32f2f; 
   --background-color: #f0f2f5;
   --card-background: #ffffff;
   --text-color: #1f2937;
@@ -12,7 +11,7 @@
   --shadow-color: rgba(0, 0, 0, 0.05);
   --danger-color: #ef4444;
   --danger-hover: #dc2626;
-  --toggle-icon: #4a5568; /* Cor do ícone do tema */
+  --toggle-icon: #4a5568; 
   --app-header-bg: #fff;
 }
 
@@ -26,11 +25,10 @@ body.dark-theme {
   --shadow-color: rgba(0, 0, 0, 0.2);
   --danger-color: #f87171;
   --danger-hover: #ef4444;
-  --toggle-icon: #cbd5e0; /* Cor do ícone do tema */
+  --toggle-icon: #cbd5e0; 
   --app-header-bg: #1a202c;
 }
 
-/* ESTILOS BASE */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -51,7 +49,7 @@ body {
   padding: 2rem;
 }
 
-/* CABEÇALHO PRINCIPAL */
+
 .app-header {
   background-color: var(--app-header-bg);
   padding: 1rem 2rem;
@@ -76,7 +74,7 @@ body {
   height: 50px;
 }
 
-/* SELETOR DE TEMA */
+
 .theme-toggle {
   background: none;
   border: none;
@@ -89,36 +87,36 @@ body {
 }
 
 .theme-toggle:hover {
-  color: var(--primary-color); /* Ou outra cor de destaque */
+  color: var(--primary-color); 
 }
 
-/* CABEÇALHO DA LISTA E FILTROS */
+
 .list-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 2.5rem;
-  padding: 0 0.5rem; /* Adicionado um pequeno padding lateral para alinhar visualmente */
+  padding: 0 0.5rem; 
 }
 
 .list-header h2 {
   font-size: 1.75rem;
   font-weight: 700;
   color: var(--text-color);
-  margin-bottom: 0; /* Remove a margem inferior padrão do h2 */
+  margin-bottom: 0; 
 }
 
 .filters {
   display: flex;
-  gap: 0.5rem; /* Reduzi um pouco o gap entre os botões */
+  gap: 0.5rem;
 }
 
 .filter-btn {
   background-color: transparent;
-  color: var(--text-light); /* cinza claro */
-  border: 1.5px solid var(--border-color); /* borda cinza */
+  color: var(--text-light); 
+  border: 1.5px solid var(--border-color); 
   padding: 0.5rem 1rem;
-  border-radius: 999px; /* pílula */
+  border-radius: 999px; 
   font-size: 0.85rem;
   font-weight: 500;
   cursor: pointer;
@@ -138,20 +136,20 @@ body {
   border-color: var(--primary-color);
 }
 
-/* GRID DE EXTENSÕES */
+
 .extensions-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1.5rem;
 }
 
-/* CARD DA EXTENSÃO */
+
 .extension-card {
   background-color: var(--card-background);
   border: 1px solid var(--border-color);
-  border-radius: 8px; /* Ajustei o border-radius para um visual mais parecido */
-  padding: 1rem; /* Reduzi um pouco o padding dos cards */
-  box-shadow: 0 2px 8px var(--shadow-color); /* Ajustei a sombra */
+  border-radius: 8px; 
+  padding: 1rem; 
+  box-shadow: 0 2px 8px var(--shadow-color); 
   display: flex;
   flex-direction: column;
   transition: all 0.3s ease;
@@ -164,26 +162,26 @@ body {
 .card-header {
   display: flex;
   align-items: center;
-  gap: 0.75rem; /* Reduzi um pouco o gap */
-  margin-bottom: 0.75rem; /* Reduzi um pouco a margem */
+  gap: 0.75rem; 
+  margin-bottom: 0.75rem; 
 }
 
 .card-logo {
-  width: 36px; /* Ajustei o tamanho do logo */
-  height: 36px; /* Ajustei o tamanho do logo */
+  width: 36px; 
+  height: 36px; 
 }
 
 .card-title {
-  font-size: 1rem; /* Ajustei o tamanho da fonte */
+  font-size: 1rem; 
   font-weight: 700;
   color: var(--text-color);
 }
 
 .card-description {
   color: var(--text-light);
-  font-size: 0.8rem; /* Ajustei o tamanho da fonte */
+  font-size: 0.8rem; 
   flex-grow: 1;
-  margin-bottom: 1rem; /* Reduzi um pouco a margem */
+  margin-bottom: 1rem; 
 }
 
 .card-footer {
@@ -191,13 +189,13 @@ body {
   justify-content: space-between;
   align-items: center;
   border-top: 1px solid var(--border-color);
-  padding-top: 0.75rem; /* Reduzi um pouco o padding */
+  padding-top: 0.75rem; 
 }
 
 .remove-btn {
   background-color: transparent;
-  color: var(--text-light); /* cor de texto neutra */
-  border: 1.5px solid var(--border-color); /* borda cinza clara */
+  color: var(--text-light); 
+  border: 1.5px solid var(--border-color); 
   padding: 0.5rem 1rem;
   border-radius: 999px;
   font-size: 0.85rem;
@@ -214,12 +212,12 @@ body {
 }
 
 
-/* INTERRUPTOR (TOGGLE SWITCH) */
+
 .toggle-switch {
   position: relative;
   display: inline-block;
-  width: 40px; /* Ajustei a largura */
-  height: 22px; /* Ajustei a altura */
+  width: 40px; 
+  height: 22px; 
 }
 
 .toggle-switch input {
@@ -243,8 +241,8 @@ body {
 .slider:before {
   position: absolute;
   content: "";
-  height: 16px; /* Ajustei a altura */
-  width: 16px; /* Ajustei a largura */
+  height: 16px; 
+  width: 16px; 
   left: 3px;
   bottom: 3px;
   background-color: white;
@@ -257,10 +255,10 @@ input:checked + .slider {
 }
 
 input:checked + .slider:before {
-  transform: translateX(18px); /* Ajustei a posição */
+  transform: translateX(18px); 
 }
 
-/* RESPONSIVIDADE */
+
 @media (max-width: 640px) {
   .container {
     padding: 1rem;
